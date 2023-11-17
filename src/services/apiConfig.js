@@ -4,7 +4,7 @@ let apiUrl; //endpoint to my database
 
 const apiUrls = {
     production:'https://foodwars-backend-4e6318df540d.herokuapp.com/api', //blank for now
-    development:'http://localhost:3000/api'
+    development:'https://foodwars-backend-4e6318df540d.herokuapp.com/api'
 }
 //to check, go to console.log window.location.hostname
 
