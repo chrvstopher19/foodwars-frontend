@@ -1,14 +1,14 @@
 import React from 'react'
 import {useEffect, useState} from 'react'
 import {getCharacters} from '../../src/services/characters.js'
-import Characters from '../components/Characters.jsx'
+import Character from '../components/Character.jsx'
 
 function Characters() {
-    const [characters , setCharacter] = useState([])
+    const [characters , setCharacters] = useState([])
 
     useEffect(()=>{
       fetchCharacters()
-    },[]) //only fire this function one time 
+    }, []) //only fire this function one time 
   
     async function fetchCharacters () {
       const allCharacters = await getCharacters()
@@ -21,7 +21,7 @@ function Characters() {
         <div className="characters-container">
           {
             characters.map((character)=>(
-             <Characters character={character} />
+              <Character character={character} />
             ))
           }
         </div>
