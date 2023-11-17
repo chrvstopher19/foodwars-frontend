@@ -7,7 +7,7 @@ function Home() {
     <div className='red-container'>
         <ul>
         <li><Link to="/characters">CHARACTERS</Link></li>
-        <li><Link to="/recipes">RECIPES</Link></li>
+        <li><Link to="/dishes">RECIPES</Link></li>
         </ul>
     </div>
   </div>
