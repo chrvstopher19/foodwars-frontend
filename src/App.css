@@ -2,7 +2,7 @@
   text-align: center;
 }
 body{
-  background-image: url("./Food-Wars-Background.jpg");
+  background-image: url("./Food-Wars-Background.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -10,12 +10,12 @@ body{
   
 }
 .red-container{
-  background-image:url("./Food\ WarsLogo.png") ;
+  background-image:url("./Food-WarsLogo.png") ;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   /* border: 2px solid white; */
-  padding:100px;
+  padding:200px;
   transform: translate(0, +40%);
 }
 ul{
