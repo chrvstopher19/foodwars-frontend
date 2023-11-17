@@ -5,16 +5,10 @@ import { NavLink } from 'react-router-dom';
 
 function Nav() {
   return (
-    <nav>
-      <NavLink to="/" className="nav-button" exact>
-        Home
+    <nav className="nav-container">
+      <NavLink to="/" className="nav-button" style={{ display: 'none' }} exact> Home
       </NavLink>
-      <NavLink to="/characters" className="button-container">
-        
-      </NavLink>
-      <NavLink to="/recipes" className="button-container">
-      
-      </NavLink>
+  
     </nav>
   );
 }

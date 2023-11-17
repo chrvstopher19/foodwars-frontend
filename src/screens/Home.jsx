@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
+import logo from "../Logo_image/nobackground food logo.png";
 import './Home.css';
 
 const Home = () => {
@@ -7,7 +8,9 @@ const Home = () => {
     <div className="container">
       <img className="background-image" src="https://raw.githubusercontent.com/chrvstopher19/foodwars-frontend/develop/src/Food-Wars-Background.png" alt="background"/> 
       <div className="overlay-container">
-      <img className="logo" src="/src/Logo_image/logo.png" alt="overlay logo"/>
+        <NavLink to="/" exact>
+      <img className="logo" src={logo} alt="overlay logo"/>
+      </NavLink>
       <div className="button-container">
           <NavLink to="/characters" className="nav-button">
             Characters!
@@ -17,6 +20,7 @@ const Home = () => {
           </NavLink>
         </div>
       </div>
+      <div className="red-rectangle"></div>
     </div>
    
   )
