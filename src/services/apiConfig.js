@@ -3,7 +3,7 @@ import axios from 'axios'
 let apiUrl; //endpoint to my database
 
 const apiUrls = {
-    production:'', //blank for now
+    production:'https://foodwars-backend-4e6318df540d.herokuapp.com/api', //blank for now
     development:'http://localhost:3000/api'
 }
 //to check, go to console.log window.location.hostname
