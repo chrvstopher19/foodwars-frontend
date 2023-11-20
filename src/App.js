@@ -5,6 +5,7 @@ import Characters from './screens/Characters.jsx';
 import Detail from './screens/CharacterDetail.jsx';
 import Dishes from "./screens/Dishes.jsx"
 import DishDetails from "./screens/DishesDetail.jsx"
+import DishCreate from './screens/DishesCreate.jsx';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/characters/:characterId" element={<Detail />} />
         <Route path="/dishes" element={<Dishes />}/>
         <Route path="/dishes/:dishesId" element={<DishDetails />} />
+        <Route path="/add-dish" element={<DishCreate />} />
       </Routes>
     </div>
   );
