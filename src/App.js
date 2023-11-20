@@ -13,6 +13,7 @@ import SignIn from "./screens/SignIn.jsx";
 import SignOut from "./screens/SignOut.jsx";
 import CharacterCreate from "./screens/CharacterCreate.jsx";
 import CharacterEdit from "./screens/CharacterEdit.jsx"
+import Nav from "./components/Nav.jsx"
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -27,6 +28,8 @@ const App = () => {
 
   return (
     <div className="App">
+      <Nav user={user}/>  
+      {/* Passing user as a prop */}
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/characters" element={<Characters />}/>
@@ -36,19 +39,16 @@ const App = () => {
         {/* <Route path="/add-dish" element={<DishCreate />} /> */}
         <Route path="/sign-up" element={<SignUp setUser={setUser} />} />
         <Route path="/sign-in" element={<SignIn setUser={setUser} />} />
-        <Route path="/sign-out" element={<SignOut setUser={setUser} />} />
-        <Route path="/add-character" element={<CharacterCreate />} />
-        <Route path="/characters/:id/edit" element={<CharacterEdit />} />
-
-        {/* <Route
+        <Route path="/sign-out" element={user ? <SignOut setUser={setUser} /> : <Navigate to="/"/> } />
+        <Route
           path="/add-character"
           element={
-            user ? <ProductCreate user={user} /> : <Navigate to="/sign-up" />
+            user ? <CharacterCreate user={user} /> : <Navigate to="/sign-up" />
           } />
         <Route
-          path="/products/:id/edit"
-          element={user ? <ProductEdit user={user} /> : <Navigate to="/" />}
-        /> */}
+          path="/characters/:id/edit"
+          element={user ? <CharacterEdit user={user} /> : <Navigate to="/sign-up" />}
+        />
       </Routes>
     </div>
   );
