@@ -18,7 +18,7 @@ function Characters({setShowNav}) {
   
     return (
       <div>
-        <h1>All the characters!</h1>
+        <h1>CHARACTERS</h1>
         <div className="characters-container">
           {
             characters.map((character)=>(

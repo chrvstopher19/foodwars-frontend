@@ -2,6 +2,9 @@
     color: aliceblue;
     text-decoration: none;
 }
+h1{
+    color:white;
+}
 .character-name{
     text-decoration: none;
     font-size:medium;
