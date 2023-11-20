@@ -11,6 +11,8 @@ import { verifyUser } from "./services/users.js";
 import SignUp from "./screens/SignUp.jsx";
 import SignIn from "./screens/SignIn.jsx";
 import SignOut from "./screens/SignOut.jsx";
+import CharacterCreate from "./screens/CharacterCreate.jsx";
+import CharacterEdit from "./screens/CharacterEdit2.jsx"
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -35,6 +37,9 @@ const App = () => {
         <Route path="/sign-up" element={<SignUp setUser={setUser} />} />
         <Route path="/sign-in" element={<SignIn setUser={setUser} />} />
         <Route path="/sign-out" element={<SignOut setUser={setUser} />} />
+        <Route path="/add-character" element={<CharacterCreate />} />
+        {/* <Route path="/edit-character" element={<CharacterEdit />} /> */}
+
         {/* <Route
           path="/add-character"
           element={
