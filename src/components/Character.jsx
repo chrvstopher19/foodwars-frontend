@@ -1,14 +1,13 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-function Character({character}) {
+function Character({character}) { //destructuring props
   return (
-    <Link to={`/characters/${character._id}`}>
-        <div>
-            <h1>{character.name}</h1>
-            <img src={character.image_Link} alt={character.name}/>
-        </div>
-    </Link>
+    <div className='imgContainer'> 
+    <Link to = {`/characters/${character._id}`}>
+      <img className="char-images" src={character.image_Link} alt={character.name}></img>
+      </Link> 
+  </div>
   )
 }
 
