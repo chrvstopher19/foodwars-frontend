@@ -27,7 +27,7 @@ function DishInfo() {
     <div>
 
           <h1> {dish.dish_name}</h1> 
-          <img src={dish.image_Link} alt={dish.dish_name} />
+          <img src={dish.img_link} alt={dish.dish_name} />
           <div>
             <h3>{dish.chef}</h3>
             <h3>{dish.description}</h3>
