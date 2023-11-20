@@ -1,32 +1,32 @@
-.character-name{
+.dish-name{
     color: aliceblue;
     text-decoration: none;
 }
-.character-name{
+.dish-name{
     text-decoration: none;
     font-size:medium;
     color:white;
     
 }
-.characters-container {
+.dishes-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 columns */
     grid-gap: 16px; /* Adjust the gap between images */
   }
   
-  .character-img-container {
+  .dish-img-container {
     position: relative;
     overflow: hidden;
   }
   
-  .character-img {
+  .dish-img {
     width: 150px; /* Ensure each image takes up the full width of its container */
     height: 150px; /* Ensure each image takes up the full height of its container */
     object-fit: cover; /* Scale the image to cover its container while maintaining aspect ratio */
     transition: transform 0.3s ease-out;
   }
   
-  .character-img-container::before {
+  .dish-img-container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -39,35 +39,22 @@
     transition: opacity 0.3s ease-out, transform 0.3s ease-out;
   }
   
-  .character-img-container:hover .character-img {
+  .dish-img-container:hover .dish-img {
     transform: scale(1.1);
   }
   
-  .character-img-container:hover::before {
+  .dish-img-container:hover::before {
     opacity: 0.8;
     transform: translateX(0) skewX(-15deg);
   }
-  /* .char-images {
-  height: 150px;
-  width: 150px;
-}
-.characters-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 20px;
-  background-image: ;
-}
-.imgContainer  {
-  object-fit: contain
-} */
+
 
 @media (max-width: 768px) {
-    .characters-container {
+    .dishes-container {
       grid-template-columns: repeat(2, 1fr); /* 2 columns on larger screens */
     }
   }
-  
+ 
   a {
     text-decoration: none;
   }
