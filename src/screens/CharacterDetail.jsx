@@ -41,9 +41,9 @@ function CharacterInfo() {
 
       <div>
           <Link to={`/characters/${characterId}/edit`}>
-          {/* <button className=' bg-red-500'>Edit</button> */}
+          <button className=' bg-red-500'>Edit</button>
         </Link>
-         <button onClick={handleEdit}>Edit</button>
+         {/* <button onClick={handleEdit}>Edit</button> */}
       </div>
     </div>
   )
