@@ -1,0 +1,32 @@
+body{
+    background-image: url("../Food-Wars-Background.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+  }
+  .red-container{
+    background-image:url("../Food-WarsLogo.png") ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border: 2px solid white; */
+    padding:200px;
+    transform: translate(0, +40%);
+  }
+  .home-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .home-list-item{
+    background-color: #FFAE0E;
+    padding:20px;
+    text-decoration: none;
+    border-radius: 45px;
+    color:white;
+  }
+  
