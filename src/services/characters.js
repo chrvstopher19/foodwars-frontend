@@ -35,6 +35,14 @@ export const editCharacter = async (id, characterData) => {
     console.log("Error:editing one character: ", error);
   }
 };
+export const updateCharacter = async (id, characterData) => {
+  try {
+    const response = await api.put(`/characters/${id}`, characterData);
+    return response.data;
+  } catch (error) {
+    console.log("Error:editing one character: ", error);
+  }
+};
 
 export const deleteCharacter = async (id) => {
   try {
