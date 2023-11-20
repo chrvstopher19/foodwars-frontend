@@ -2,7 +2,8 @@ import {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { createDish } from '../services/dishes.js'
 
-function DishCreate() {
+function DishCreate({setShowNav}) {
+  setShowNav(true)
   const[dish, setDish] = useState({
     chef:"",
     dish_name:"",

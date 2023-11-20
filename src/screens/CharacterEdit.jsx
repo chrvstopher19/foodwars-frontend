@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { editCharacter, getCharacter } from '../services/characters.js';
 
-function CharacterEdit() {
+function CharacterEdit(setShowNav) {
+  setShowNav(true)
   const [character, setCharacter] = useState({
     name: "",
     age: "",

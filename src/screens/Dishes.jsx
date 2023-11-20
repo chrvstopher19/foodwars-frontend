@@ -3,7 +3,8 @@ import {useEffect, useState} from 'react'
 import {getDishes} from '../services/dishes.js'
 import Dish from '../components/Dish.jsx'
 
-function Dishes() {
+function Dishes({setShowNav}) {
+  setShowNav(true)
     const [dishes , setDishes] = useState([])
 
     useEffect(()=>{

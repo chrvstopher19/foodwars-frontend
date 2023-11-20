@@ -3,7 +3,8 @@ import {useEffect, useState} from 'react'
 import {getCharacters} from '../../src/services/characters.js'
 import Character from '../components/Character.jsx'
 
-function Characters() {
+function Characters({setShowNav}) {
+  setShowNav(true)
     const [characters , setCharacters] = useState([])
 
     useEffect(()=>{

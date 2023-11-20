@@ -3,7 +3,8 @@ import { getCharacter, editCharacter } from '../services/characters.js';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 
 
-function CharacterInfo() {
+function CharacterInfo({setShowNav}) {
+  setShowNav(true)
   const [character, setCharacter] = useState({})
 
   let { characterId } = useParams()
