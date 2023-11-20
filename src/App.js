@@ -31,10 +31,19 @@ const App = () => {
         <Route path="/characters/:characterId" element={<Detail />} />
         <Route path="/dishes" element={<Dishes />}/>
         <Route path="/dishes/:dishesId" element={<DishDetails />} />
-        <Route path="/add-dish" element={<DishCreate />} />
+        {/* <Route path="/add-dish" element={<DishCreate />} /> */}
         <Route path="/sign-up" element={<SignUp setUser={setUser} />} />
         <Route path="/sign-in" element={<SignIn setUser={setUser} />} />
         <Route path="/sign-out" element={<SignOut setUser={setUser} />} />
+        {/* <Route
+          path="/add-character"
+          element={
+            user ? <ProductCreate user={user} /> : <Navigate to="/sign-up" />
+          } />
+        <Route
+          path="/products/:id/edit"
+          element={user ? <ProductEdit user={user} /> : <Navigate to="/" />}
+        /> */}
       </Routes>
     </div>
   );
