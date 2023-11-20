@@ -11,9 +11,14 @@ import { verifyUser } from "./services/users.js";
 import SignUp from "./screens/SignUp.jsx";
 import SignIn from "./screens/SignIn.jsx";
 import SignOut from "./screens/SignOut.jsx";
+import CharacterCreate from "./screens/CharacterCreate.jsx";
+import CharacterEdit from "./screens/CharacterEdit.jsx"
+import Nav from "./components/Nav.jsx"
+
 
 const App = () => {
   const [user, setUser] = useState(null);
+  const [showNav , setShowNav] = useState(false);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -25,16 +30,27 @@ const App = () => {
 
   return (
     <div className="App">
+      {showNav? <Nav user={user}/>: null} 
+      {/* Passing user as a prop */}
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/characters" element={<Characters />}/>
-        <Route path="/characters/:characterId" element={<Detail />} />
-        <Route path="/dishes" element={<Dishes />}/>
-        <Route path="/dishes/:dishesId" element={<DishDetails />} />
-        <Route path="/add-dish" element={<DishCreate />} />
-        <Route path="/sign-up" element={<SignUp setUser={setUser} />} />
-        <Route path="/sign-in" element={<SignIn setUser={setUser} />} />
-        <Route path="/sign-out" element={<SignOut setUser={setUser} />} />
+        <Route path="/" element={<Home setShowNav={setShowNav}/>}/>
+        <Route path="/characters" element={<Characters setShowNav={setShowNav}/>}/>
+        <Route path="/characters/:characterId" element={<Detail setShowNav={setShowNav}/>} />
+        <Route path="/dishes" element={<Dishes setShowNav={setShowNav}/>}/>
+        <Route path="/dishes/:dishesId" element={<DishDetails setShowNav={setShowNav}/>} />
+        {/* <Route path="/add-dish" element={<DishCreate />} /> */}
+        <Route path="/sign-up" element={<SignUp setUser={setUser} setShowNav={setShowNav}/>} />
+        <Route path="/sign-in" element={<SignIn setUser={setUser} setShowNav={setShowNav}/>} />
+        <Route path="/sign-out" element={user ? <SignOut setUser={setUser} setShowNav={setShowNav}/> : <Navigate to="/"/> } />
+        <Route
+          path="/add-character"
+          element={
+            user ? <CharacterCreate user={user} /> : <Navigate to="/sign-up" setShowNav={setShowNav} />
+          } />
+        <Route
+          path="/characters/:id/edit"
+          element={user ? <CharacterEdit user={user} /> : <Navigate to="/sign-up" setShowNav={setShowNav} />}
+        />
       </Routes>
     </div>
   );

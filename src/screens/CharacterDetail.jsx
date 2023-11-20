@@ -3,7 +3,8 @@ import { getCharacter, editCharacter } from '../services/characters.js';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 
 
-function CharacterInfo() {
+function CharacterInfo({setShowNav}) {
+  setShowNav(true)
   const [character, setCharacter] = useState({})
 
   let { characterId } = useParams()
@@ -41,9 +42,9 @@ function CharacterInfo() {
 
       <div>
           <Link to={`/characters/${characterId}/edit`}>
-          {/* <button className=' bg-red-500'>Edit</button> */}
+          <button className=' bg-red-500'>Edit</button>
         </Link>
-         <button onClick={handleEdit}>Edit</button>
+         {/* <button onClick={handleEdit}>Edit</button> */}
       </div>
     </div>
   )

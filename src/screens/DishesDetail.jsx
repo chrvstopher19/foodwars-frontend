@@ -3,7 +3,8 @@ import { getDish, editDish } from '../services/dishes.js';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 
 
-function DishInfo() {
+function DishInfo({setShowNav}) {
+  setShowNav(true)
   const [dish, setDish] = useState({})
 
   let { dishesId } = useParams()

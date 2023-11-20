@@ -1,12 +1,9 @@
-import { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
-import { Layout } from '../../components'
-import { getCharacter, updateCharacter } from '../../services/characters.js'
+import { useState, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { editCharacter, getCharacter } from '../services/characters.js';
 
-const characterEdit = (props) => {
-
-  let navigate = useNavigate()
-
+function CharacterEdit(setShowNav) {
+  setShowNav(true)
   const [character, setCharacter] = useState({
     name: "",
     age: "",
@@ -21,51 +18,38 @@ const characterEdit = (props) => {
   })
 
   let { id } = useParams()
+  let navigate = useNavigate()
 
   useEffect(() => {
-    const fetchCharacter = async () => {
-      const product = await getCharacter(id)
-      setCharacter(character)
-    }
     fetchCharacter()
-  }, [id])
+  }, [])
 
-  const handleChange = (event) => {
-    const { name, value } = event.target
-    setCharacter({
-      ...character,
-      [name]: value,
-    })
+  async function fetchCharacter() {
+    const oneCharacter = await getCharacter(id)
+    setCharacter(oneCharacter)
   }
 
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-    await updateCharacter(id, character)
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    await editCharacter(id, character)
     navigate(`/characters/${id}`)
   }
 
+  const handleChange = (e) => {
+    const { name, value } = e.target
+
+    setCharacter((prevCharacter) => ({
+      ...prevCharacter,
+      [name]: value
+    }))
+  }
+
   return (
-    <Layout user={props.charcter}>
-      <div className='character-edit'>
-        <div className='image-container'>
-          <img
-            className='edit-character-image'
-            src={character.imgURL}
-            alt={character.name}
-          />
-          <form onSubmit={handleSubmit}>
-            <input
-              className='edit-input-image-link'
-              placeholder='Image Link'
-              value={character.imgURL}
-              name='imgURL'
-              required
-              onChange={handleChange}
-            />
-          </form>
-        </div>
-        <form className='edit-form' onSubmit={handleSubmit}>
-          <input
+    <div>
+      <h1>Edit the character in our Database!</h1>
+      <form className="create-form" onSubmit={handleSubmit}>
+      <input
             className='input-name'
             placeholder='Name'
             value={character.name}
@@ -74,7 +58,7 @@ const characterEdit = (props) => {
             autoFocus
             onChange={handleChange}
           />
-          <input
+        <input
             className='input-age'
             placeholder='age'
             value={character.age}
@@ -146,13 +130,10 @@ const characterEdit = (props) => {
             required
             onChange={handleChange}
           />
-          <button type='submit' className='save-button'>
-            Save
-          </button>
-        </form>
-      </div>
-    </Layout>
+        <button type="submit">Edit Your Character!</button>
+      </form>
+    </div>
   )
 }
 
-export default characterEdit
+export default CharacterEdit
