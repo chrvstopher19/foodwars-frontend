@@ -85,3 +85,15 @@ ul{
 .imgContainer  {
   object-fit: contain
 }
+
+a {
+	color: #eeeeee;
+	text-decoration: none;
+	font-weight:bolder;
+	}
+
+a:hover {
+	color:#ffffff;
+	text-indent: 1em;
+  size: 105%;
+	}
