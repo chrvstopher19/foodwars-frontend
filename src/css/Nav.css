@@ -7,5 +7,20 @@
     grid-row-gap: 0px;
 }
 #nav-img{
-    max-width: 30%;
+    width: 30%;
+    min-width: 150px;
 }
+#sign-up-img{
+    width:150px;
+    margin-top:10px;
+}
+#add-char-img{
+    width:100px;
+    margin-top: 3px;
+}
+/* .nav-links{
+    background-color: #ffae0e;
+    padding:40px;
+    font-size: 24px;
+    font-weight: bolder;
+} */

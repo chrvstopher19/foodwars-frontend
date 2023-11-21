@@ -7,9 +7,10 @@ function Nav({user}) {
   return (
     <div className='nav'>
         <NavLink id="link"to ="/"><img src="https://www.themoviedb.org/t/p/original/rO11TGG5ZG1LlmSJX0Q1j1AWGZJ.png" id="nav-img" /></NavLink>
-        
-        {user? <div><NavLink to="/add-character">Add Character</NavLink></div>
-        :<div><NavLink to="/sign-up">Sign Up</NavLink></div>}
+        <div></div>
+        <div></div>
+        {user? <div className='nav-links'><NavLink to="/add-character"><img id="add-char-img" src="https://cdn0.iconfinder.com/data/icons/game-ui-casual-chunky/533/IconsByAndreaFryer_GameUI_Chunky_AddFriend-512.png"/></NavLink></div>
+        :<div className='nav-links'><NavLink to="/sign-up"><img id="sign-up-img"src="https://static.vecteezy.com/system/resources/previews/019/552/601/original/sign-up-icon-signup-square-box-on-transparent-background-free-png.png" /></NavLink></div>}
 
     </div>
   )
