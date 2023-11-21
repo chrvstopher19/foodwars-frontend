@@ -1,3 +1,38 @@
 .nav{
-    background-color: aquamarine;
+    display: grid;
+    background-color: #FF7405;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap:0px;
+    grid-row-gap: 0px;
 }
+#nav-img{
+    width: 30%;
+    min-width: 150px;
+}
+#sign-up-img{
+    width:150px;
+    margin-top:10px;
+}
+#add-char-img{
+    width:100px;
+    margin-top: 3px;
+}
+.bg-red-500{
+    padding: 10px 40px;
+    border-radius: 100px;
+    background-color: #FFAE0E;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 2px 3px 0px 0 #FF7405, 0 0px 0px 0 #FF7405;
+    border: none;
+    color:white;
+    font-weight: bolder;
+	margin:22px;
+}
+/* .nav-links{
+    background-color: #ffae0e;
+    padding:40px;
+    font-size: 24px;
+    font-weight: bolder;
+} */

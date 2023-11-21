@@ -18,7 +18,7 @@ function Dishes({setShowNav}) {
   
     return (
       <div>
-        <h1>All the Dishes!</h1>
+        <h1>DISHES</h1>
         <div className="dishes-container">
           {
             dishes.map((dish)=>(

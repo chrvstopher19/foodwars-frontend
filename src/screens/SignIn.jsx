@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { signIn } from '../services/users.js'
 import { useNavigate } from 'react-router-dom'
+import "../css/SignIn.css"
 
 const SignIn = (props) => {
   const navigate = useNavigate()
@@ -46,17 +47,18 @@ const SignIn = (props) => {
         </button>
       )
     } else {
-      return <button type='submit'>Sign In</button>
+      return <button class="bg-red-500" type='submit'>SIGN IN</button>
     }
   }
 
   const { email, password } = form
 
   return (
+    <div className='main-div'>
     <div className='form-container'>
-      <h3>Sign In</h3>
+      <h3 id="header">Sign In</h3>
       <form onSubmit={onSignIn}>
-        <label>Email</label>
+        <label className="prompt">Email</label>
         <input
           required
           type='text'
@@ -64,8 +66,9 @@ const SignIn = (props) => {
           value={email}
           placeholder='Enter Email'
           onChange={handleChange}
+          className='input'
         />
-        <label>Password</label>
+        <label className="prompt">Password</label>
         <input
           required
           name='password'
@@ -73,9 +76,11 @@ const SignIn = (props) => {
           type='password'
           placeholder='Password'
           onChange={handleChange}
+          className='input'
         />
         {renderError()}
       </form>
+    </div>
     </div>
   )
 }

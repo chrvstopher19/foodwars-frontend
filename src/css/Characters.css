@@ -1,0 +1,76 @@
+.character-name{
+    color: aliceblue;
+    text-decoration: none;
+}
+h1{
+    color:white;
+}
+.character-name{
+    text-decoration: none;
+    font-size:medium;
+    color:white;
+    
+}
+.characters-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-gap: 16px; /* Adjust the gap between images */
+  }
+  
+  .character-img-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .character-img {
+    width: 150px; /* Ensure each image takes up the full width of its container */
+    height: 150px; /* Ensure each image takes up the full height of its container */
+    object-fit: cover; /* Scale the image to cover its container while maintaining aspect ratio */
+    transition: transform 0.3s ease-out;
+  }
+  
+  .character-img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff8c00, #ffcc00);
+    opacity: 0;
+    transform: translateX(-100%) skewX(-15deg);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  }
+  
+  .character-img-container:hover .character-img {
+    transform: scale(1.1);
+  }
+  
+  .character-img-container:hover::before {
+    opacity: 0.8;
+    transform: translateX(0) skewX(-15deg);
+  }
+  /* .char-images {
+  height: 150px;
+  width: 150px;
+}
+.characters-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+  background-image: ;
+}
+.imgContainer  {
+  object-fit: contain
+} */
+
+@media (max-width: 768px) {
+    .characters-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on larger screens */
+    }
+  }
+  
+  a {
+    text-decoration: none;
+  }

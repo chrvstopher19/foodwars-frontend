@@ -1,9 +1,10 @@
 import {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { createCharacter } from '../services/characters.js'
+import "../css/CharacterCreate.css"
 
 function CharacterCreate({setShowNav}) {
-  setShowNav(true)
+  // setShowNav(true)
   const[character, setCharacter] = useState({
     name: "",
     age: "",
@@ -45,6 +46,7 @@ function CharacterCreate({setShowNav}) {
       // Needs value 
       value={character.name}
       onChange={handleChange}
+      className="input"
       />
        <input
       type="text"
@@ -53,6 +55,7 @@ function CharacterCreate({setShowNav}) {
       // Needs value 
       value={character.age}
       onChange={handleChange}
+      className="input"
       />
        <input
       type="text"
@@ -61,6 +64,7 @@ function CharacterCreate({setShowNav}) {
       // Needs value 
       value={character.Gender}
       onChange={handleChange}
+      className="input"
       />
        <input
       type="text"
@@ -69,6 +73,7 @@ function CharacterCreate({setShowNav}) {
       // Needs value 
       value={character.Cuisine_Style}
       onChange={handleChange}
+      className="input"
       />
        <input
       type="text"
@@ -77,6 +82,7 @@ function CharacterCreate({setShowNav}) {
       // Needs value 
       value={character.Affiliation}
       onChange={handleChange}
+      className="input"
       />
        <input
       type="text"
@@ -85,6 +91,7 @@ function CharacterCreate({setShowNav}) {
       // Needs value 
       value={character.Food_Forte}
       onChange={handleChange}
+      className="input"
       />
         <input
       type="text"
@@ -93,6 +100,7 @@ function CharacterCreate({setShowNav}) {
       // Needs value 
       value={character.Elite_10_Member}
       onChange={handleChange}
+      className="input"
       />
         <input
       type="text"
@@ -101,6 +109,7 @@ function CharacterCreate({setShowNav}) {
       // Needs value 
       value={character.Generation}
       onChange={handleChange}
+      className="input"
       />
         <input
       type="text"
@@ -109,6 +118,7 @@ function CharacterCreate({setShowNav}) {
       // Needs value 
       value={character.School}
       onChange={handleChange}
+      className="input"
       />
         <input
       type="text"
@@ -117,8 +127,9 @@ function CharacterCreate({setShowNav}) {
       // Needs value 
       value={character.image_Link}
       onChange={handleChange}
+      className="input"
       />
-      <button type="submit">submit</button>
+      <button className="bg-red-500" type="submit">submit</button>
       </form>
     </div>
   )
