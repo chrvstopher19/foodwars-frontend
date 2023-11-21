@@ -1,111 +1,69 @@
-body{
-    background-image: url("../Food-Wars-Background.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    
-  }
-  .red-container{
-    background-image:url("../Food-WarsLogo.png") ;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* border: 2px solid white; */
-    padding-top:50%;
-    transform: translate(0, +30%);
-  }
-  .home-list{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-  .home-list-item{
-    padding: 10px 40px;
-    border-radius: 100px;
-    background-color: #FFAE0E;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    box-shadow: 2px 3px 0px 0 #FF7405, 0 0px 0px 0 #FF7405;
-    border: none;
-    color:white;
-    font-weight: bolder;
-    font-size: 30px;
-  }
-  .home-list-item:hover{
-    background-color: #FF7405;
-    box-shadow: 2px 3px 0px 0 #FFAE0E, 0 0px 0px 0 #FFAE0E;
-  }
-  a{
-    color: white;
-  }
-  @media (max-width: 768px) {
-    .home-list{
-     flex-direction: column;
-    }
-    #dishes-btn{
-      margin-top: 400px;
-    }
-    #characters-btn{
-      margin-top: 50px;
-    }
-  }
-  a {
-    text-decoration: none;
-  }
-  .red-container{
-    transform: translate(0, 0%);
-    padding-top: 0%;
-   
-  }
-  @media(max-width: 375px){
-    #dishes-btn{
-      margin-top: 400px;
-      font-size: 15px;
-    }
-    #characters-btn{
-      margin-top: 50px;
-      font-size: 15px;
-    }
-  }
-  @media(min-width: 769px){
-    .red-container{
-      padding:200px;
-    }
-  } 
-
-  @media(max-width: 1516px){
-    .home-list{
-      flex-direction: column;
-      align-items: center;
-     }
-     .home-list-item{
-      max-width: fit-content;
-     }
-     #dishes-btn{
-      margin-top: 500px;
-      
-    }
-    #characters-btn{
-      margin-top: 60px;
-    }
-  }
-
-  
-  /* .bg-red-500{
-    padding: 10px 40px;
-    border-radius: 100px;
-    background-color: #FFAE0E;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    box-shadow: 2px 3px 0px 0 #FF7405, 0 0px 0px 0 #FF7405;
-    border: none;
-    color:white;
-    font-weight: bolder;
+body {
+  background-image: url("../Food-Wars-Background.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
-.bg-red-500:hover{
-    background-color: #FF7405;
-    box-shadow: 2px 3px 0px 0 #FFAE0E, 0 0px 0px 0 #FFAE0E;
-    padding: 10px 50px; */
+
+.red-container {
+  background-image: url("../Food-WarsLogo.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* padding-top: 50%; */
+  transform: translate(0, +30%);
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-list {
+  list-style-type: none;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.home-list-item {
+  padding: 10px 40px;
+  border-radius: 100px;
+  background-color: #ffae0e;
+  box-shadow: 2px 3px 0px 0 #ff7405, 0 0px 0px 0 #ff7405;
+  border: none;
+  color: white;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.home-list-item:hover {
+  background-color: #ff7405;
+  box-shadow: 2px 3px 0px 0 #ffae0e, 0 0px 0px 0 #ffae0e;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 1516px) {
+
+  .home-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-list-item {
+    max-width: fit-content;
+    font-size: 20px;
+  }
+  #dishes-btn {
+    margin-top: 350px;
+  }
+  #characters-btn {
+    margin-top: -30px;
+  }
+}
+
+

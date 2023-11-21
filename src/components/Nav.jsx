@@ -6,9 +6,10 @@ function Nav({user}) {
 // either use {user} i.e destructuring or props as is
   return (
     <div className='nav'>
-        <NavLink to ="/">Home</NavLink>
-        {user? <div>Logged In</div>
-        :<div>Logged Out</div>}
+        <NavLink id="link"to ="/"><img src="https://www.themoviedb.org/t/p/original/rO11TGG5ZG1LlmSJX0Q1j1AWGZJ.png" id="nav-img" /></NavLink>
+        
+        {user? <div><NavLink to="/add-character">Add Character</NavLink></div>
+        :<div><NavLink to="/sign-up">Sign Up</NavLink></div>}
 
     </div>
   )

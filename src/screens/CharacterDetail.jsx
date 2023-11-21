@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getCharacter, editCharacter } from "../services/characters.js";
+import { getCharacter, editCharacter, deleteCharacter } from "../services/characters.js";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import "../css/DetailPage.css";
 
@@ -22,6 +22,10 @@ function CharacterInfo({ setShowNav }) {
   async function handleEdit() {
     await editCharacter(characterId);
     navigate("/characters");
+  }
+  async function handleDelete(){
+    await deleteCharacter(characterId)
+    navigate("/characters")
   }
 
   return (
@@ -69,7 +73,8 @@ function CharacterInfo({ setShowNav }) {
         <Link to={`/characters/${characterId}/edit`}>
           <button className="bg-red-500">EDIT</button>
         </Link>
-        {/* <button onClick={handleEdit}>Edit</button> */}
+        <button className="bg-red-500" onClick={handleDelete}>Delete</button>
+        
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { createCharacter } from '../services/characters.js'
 
 function CharacterCreate({setShowNav}) {
-  setShowNav(true)
+  // setShowNav(true)
   const[character, setCharacter] = useState({
     name: "",
     age: "",
