@@ -8,8 +8,8 @@ function Home({setShowNav}) {
     <div>
     <div className='red-container'>
         <ul className='home-list'>
-        <li className='home-list-item'><Link to="/characters">CHARACTERS</Link></li>
-        <li className='home-list-item'><Link to="/dishes">RECIPES</Link></li>
+        <li id="characters-btn" className='home-list-item'><Link to="/characters">CHARACTERS</Link></li>
+        <li id="dishes-btn" className='home-list-item'><Link to="/dishes">RECIPES</Link></li>
         </ul>
     </div>
   </div>

@@ -61,7 +61,7 @@ function DishInfo({setShowNav}) {
           <button className="bg-red-500">Edit</button>
         </Link> */}
         <Link to = "/dishes">
-        <button className="bg-red-500">All Dishes</button>
+        <button className="bg-red-500">View All Dishes</button>
         </Link>
          {/* <button onClick={handleEdit}>Edit</button> */}
       </div>
