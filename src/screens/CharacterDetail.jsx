@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getCharacter, editCharacter } from '../services/characters.js';
 import { Link, useParams, useNavigate } from 'react-router-dom';
+import "../css/DetailPage.css"
 
 
 function CharacterInfo({setShowNav}) {
@@ -28,16 +29,16 @@ function CharacterInfo({setShowNav}) {
     <div>
 
           <h1> {character.name}</h1> 
-          <img src={character.image_Link} alt={character.name} />
+          <img className="detail-page-image" src={character.image_Link} alt={character.name} />
           <div>
-            <h3>{character.age}</h3>
-            <h3>{character.Gender}</h3>
-            <h3>{character.Cusine_Style}</h3>
-            <h3>{character.Affiliation}</h3>
-            <h3>{character.Food_Forte}</h3>
-            <h3>{character.Elite_10_Member}</h3>
-            <h3>{character.Generation}</h3>
-            <h3>{character.School}</h3>
+            <h3>Age: {character.age}</h3>
+            <h3>Gender: {character.Gender}</h3>
+            <h3>Cuisine Style: {character.Cusine_Style}</h3>
+            <h3>Affiliation: {character.Affiliation}</h3>
+            <h3>Food Forté: {character.Food_Forte}</h3>
+            <h3>Elite 10 Member?: {character.Elite_10_Member}</h3>
+            <h3>Generation: {character.Generation}</h3>
+            <h3>School: {character.School}</h3>
           </div>
 
       <div>

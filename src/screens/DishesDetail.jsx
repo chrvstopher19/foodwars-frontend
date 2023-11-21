@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getDish, editDish } from '../services/dishes.js';
 import { Link, useParams, useNavigate } from 'react-router-dom';
+import "../css/DetailPage.css"
 
 
 function DishInfo({setShowNav}) {
@@ -28,7 +29,7 @@ function DishInfo({setShowNav}) {
     <div>
 
           <h1> {dish.dish_name}</h1> 
-          <img src={dish.img_link} alt={dish.dish_name} />
+          <img className="detail-page-image" src={dish.img_link} alt={dish.dish_name} />
           <div>
             <h3>{dish.chef}</h3>
             <h3>{dish.description}</h3>
