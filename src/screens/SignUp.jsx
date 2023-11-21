@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { signUp } from '../services/users'
 import { useNavigate } from 'react-router-dom'
+import "../css/Signup.css"
 
 const SignUp = (props) => {
   const navigate = useNavigate()
@@ -49,17 +50,18 @@ const SignUp = (props) => {
         </button>
       )
     } else {
-      return <button type='submit'>Sign Up</button>
+      return <button type='submit' className='bg-red-500'>Sign Up</button>
     }
   }
 
   const { username, email, password, passwordConfirmation } = form
 
   return (
+    <div className='main-div'>
     <div className='form-container'>
-      <h3>Sign Up</h3>
+      <h3 id="header">Sign Up</h3>
       <form onSubmit={onSignUp}>
-        <label>Username</label>
+      <label className="prompt">USERNAME</label>
         <input
           required
           type='text'
@@ -67,8 +69,9 @@ const SignUp = (props) => {
           value={username}
           placeholder='Enter username'
           onChange={handleChange}
+          className='input'
         />
-        <label>Email address</label>
+        <label className="prompt">EMAIL ADDRESS</label>
         <input
           required
           type='email'
@@ -76,8 +79,9 @@ const SignUp = (props) => {
           value={email}
           placeholder='Enter email'
           onChange={handleChange}
+          className='input'
         />
-        <label>Password</label>
+                <label className="prompt">PASSWORD</label>
         <input
           required
           name='password'
@@ -85,8 +89,9 @@ const SignUp = (props) => {
           type='password'
           placeholder='Password'
           onChange={handleChange}
+          className='input'
         />
-        <label>Password Confirmation</label>
+        <label className="prompt">PASSWORD CONFIRMATION</label>
         <input
           required
           name='passwordConfirmation'
@@ -94,9 +99,12 @@ const SignUp = (props) => {
           type='password'
           placeholder='Confirm Password'
           onChange={handleChange}
+          className='input'
+
         />
         {renderError()}
       </form>
+    </div>
     </div>
   )
 }
