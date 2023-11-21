@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { signUp } from '../services/users'
-import { useNavigate } from 'react-router-dom'
+import { Link , useNavigate } from 'react-router-dom'
 import "../css/Signup.css"
 
 const SignUp = (props) => {
@@ -104,6 +104,9 @@ const SignUp = (props) => {
         />
         {renderError()}
       </form>
+      <Link to={"/sign-in"}>
+          <button className="bg-red-500">SIGN IN</button>
+        </Link>
     </div>
     </div>
   )
