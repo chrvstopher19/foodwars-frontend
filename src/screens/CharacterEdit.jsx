@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { editCharacter, getCharacter } from '../services/characters.js';
 
 function CharacterEdit(setShowNav) {
-  setShowNav(true)
+  // setShowNav(true)
   const [character, setCharacter] = useState({
     name: "",
     age: "",
